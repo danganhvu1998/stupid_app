@@ -1,0 +1,42 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login - Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input #username type="text" value="conmaxau"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Password</ion-label>
+			<ion-input #password type="password" value="whatever!"></ion-input>
+		</ion-item>
+	</ion-list>
+
+	<ion-item>
+		<ion-label>Remember me for a month</ion-label>
+		<ion-checkbox #rememberMe color="dark" checked="true"></ion-checkbox>
+	</ion-item>
+
+	<div>
+		<button ion-button color="secondary" (click)='requestServer("login")' round>Login</button>
+		<button ion-button color="danger" (click)='requestServer("regis")' round>Register</button>
+	</div>
+	<div>
+		<p><br><br>Debug {{valTesting}}</p>
+	</div>
+</ion-content>
