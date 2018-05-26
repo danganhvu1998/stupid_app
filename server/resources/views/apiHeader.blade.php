@@ -5,7 +5,7 @@
 	//$rememberMe = $_GET['rememberMe'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];	
-	$rememberMe = $_POST['rememberMe']
+	$rememberMe = $_POST['rememberMe'];
 	echo "LOL apiHeader.blade.php<br>";
 	echo $username."<br>";
 	echo $password."<br>";
