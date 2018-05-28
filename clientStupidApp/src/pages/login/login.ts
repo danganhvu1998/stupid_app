@@ -69,7 +69,7 @@ export class LoginPage {
 
   requestServer(userRequest){
     console.log(this.username.value, this.password.value, this.rememberMe.value, userRequest); 
-    this.loadDoc("GET");
+    this.loadDoc("POST");
     if( this.username.value =='conmaxau' && this.password.value=='whatever'){
       console.log("Login Success!");
       this.navCtrl.setRoot(HelloIonicPage);

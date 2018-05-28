@@ -74,7 +74,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage.prototype.requestServer = function (userRequest) {
         console.log(this.username.value, this.password.value, this.rememberMe.value, userRequest);
-        this.loadDoc("GET");
+        this.loadDoc("POST");
         if (this.username.value == 'conmaxau' && this.password.value == 'whatever') {
             console.log("Login Success!");
             this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__hello_ionic_hello_ionic__["a" /* HelloIonicPage */]);
@@ -99,9 +99,10 @@ var LoginPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/home/kyatod/Dropbox/stupid_app/clientStupidApp/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Login - Register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n	\n	<ion-list>\n		<ion-item>\n			<ion-label floating>Username</ion-label>\n			<ion-input #username type="text" value="conmaxau"></ion-input>\n		</ion-item>\n\n		<ion-item>\n			<ion-label floating>Password</ion-label>\n			<ion-input #password type="password" value="whatever!"></ion-input>\n		</ion-item>\n	</ion-list>\n\n	<ion-item>\n		<ion-label>Remember me for a month</ion-label>\n		<ion-checkbox #rememberMe color="dark" checked="true"></ion-checkbox>\n	</ion-item>\n\n	<div>\n		<button ion-button color="secondary" (click)=\'requestServer("login")\' round>Login</button>\n		<button ion-button color="danger" (click)=\'requestServer("regis")\' round>Register</button>\n	</div>\n	<div>\n		<p><br><br>Debug {{valTesting}}</p>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/home/kyatod/Dropbox/stupid_app/clientStupidApp/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=login.js.map
