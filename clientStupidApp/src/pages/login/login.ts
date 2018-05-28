@@ -39,7 +39,7 @@ export class LoginPage {
       var data = "username="+this.username.value
         +"&password="+this.password.value
         +"&rememberMe="+this.rememberMe.value;
-
+      console.log("Data:", data);
       xhttp.onreadystatechange = function() {
         console.log("loadDoc ... ", this.readyState, this.status)
         if (this.readyState == 4 && this.status == 200) {
@@ -48,13 +48,15 @@ export class LoginPage {
       };
       xhttp.open("POST", "http://localhost:8000/api/test/", true);
       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      //xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send(data);
     } else {
       console.log("GET METHOD");
       xhttp.onreadystatechange = function() {
         console.log("loadDoc ... ", this.readyState, this.status)
         if (this.readyState == 4 && this.status == 200) {
-           console.log("Taken value: ", this.responseText);
+          console.log("Taken value: ", this.responseText);
+          return this.responseText;
         }
       };
       xhttp.open("GET", "http://localhost:8000/api/test?"
@@ -67,11 +69,7 @@ export class LoginPage {
 
   requestServer(userRequest){
     console.log(this.username.value, this.password.value, this.rememberMe.value, userRequest); 
-    if(this.rememberMe.value == true){
-      this.loadDoc("POST");
-    } else {
-      this.loadDoc("GET");
-    }
+    this.loadDoc("GET");
     if( this.username.value =='conmaxau' && this.password.value=='whatever'){
       console.log("Login Success!");
       this.navCtrl.setRoot(HelloIonicPage);
