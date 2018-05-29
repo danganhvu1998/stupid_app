@@ -6,9 +6,8 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];	
 	$rememberMe = $_POST['rememberMe'];
-	echo "LOL apiHeader.blade.php<br>";
-	echo $username."<br>";
-	echo $password."<br>";
-	echo $rememberMe."<br>";
-	
+	echo "LOL apiHeader.blade.php\n\t";
+	echo $username."\n\t";
+	echo $password."\n\t";
+	echo $rememberMe."\n";	
 ?>

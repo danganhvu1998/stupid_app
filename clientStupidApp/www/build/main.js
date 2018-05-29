@@ -75,12 +75,13 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.requestServer = function (userRequest) {
         console.log(this.username.value, this.password.value, this.rememberMe.value, userRequest);
         this.loadDoc("POST");
+        this.loadDoc("GET");
         if (this.username.value == 'conmaxau' && this.password.value == 'whatever') {
             console.log("Login Success!");
             this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__hello_ionic_hello_ionic__["a" /* HelloIonicPage */]);
         }
         else {
-            console.log("Login Fail!");
+            console.log("Login Fail! correct password is 'whatever' and correct username is 'conmaxau'");
         }
     };
     __decorate([
