@@ -74,7 +74,7 @@ export class LoginPage {
       console.log("Login Success!");
       this.navCtrl.setRoot(HelloIonicPage);
     } else {
-      console.log("Login Fail!")
+      console.log("Login Fail! correct password is 'whatever'");
     }
   }
 
